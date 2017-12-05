@@ -19,10 +19,7 @@ def job():
 	try:
 		os.remove(filename)
 	except OSError:
-		pass		
-	
-	
-   
+		pass		 
 
 	ip = ''
 	username = ''

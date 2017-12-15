@@ -86,7 +86,7 @@ try:
 	#socket.recv(bufsize[, flags]) - Receive data from the socket. The return value is a bytes object representing the data received.
 	#The maximum amount of data to be received at once is specified by bufsize.
 	#See the Unix manual page recv(2) for the meaning of the optional argument flags; it defaults to zero.
-	output = remote_conn.recv(5000)
+	output = remote_conn.recv(4096)
 	print (output)
 
 	remote_conn.send(COMMAND + '\n')
@@ -95,7 +95,7 @@ try:
 	for i in range(0,250):
 		remote_conn.send(' ')
 		time.sleep(1)
-		result = remote_conn.recv(5000)
+		result = remote_conn.recv(4096)
 		fileText = result.strip()
 		writeFile = open(filename6,'ab')
 		writeFile.write (fileText)
@@ -108,7 +108,7 @@ try:
 	for i in range(0,15):
 		remote_conn.send(' ')
 		time.sleep(1)
-		result = remote_conn.recv(5000)
+		result = remote_conn.recv(4096)
 		fileText = result.strip()
 		writeFile = open(asa_show_version,'ab')
 		writeFile.write (fileText)

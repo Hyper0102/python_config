@@ -82,6 +82,10 @@ try:
 	time.sleep(1)
 	remote_conn.send(password + '\n')
 	time.sleep(1)
+	
+	#socket.recv(bufsize[, flags]) - Receive data from the socket. The return value is a bytes object representing the data received.
+	#The maximum amount of data to be received at once is specified by bufsize.
+	#See the Unix manual page recv(2) for the meaning of the optional argument flags; it defaults to zero.
 	output = remote_conn.recv(5000)
 	print (output)
 

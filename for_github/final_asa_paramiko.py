@@ -111,6 +111,7 @@ try:
 		print(result)
 	
 except paramiko.ssh_exception.NoValidConnectionsError:
+	//with open - the file is properly closed after its suite finishes, even if an exception is raised on the way.
 		with open(r"directory"'log','a') as file:
 			file.write("\n")
 			file.write(time.strftime('%d_%m_%Y_%H:%M:%S')+"  Unable to connect to port ")

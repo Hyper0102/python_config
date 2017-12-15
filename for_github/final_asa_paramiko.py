@@ -87,6 +87,9 @@ try:
 	#The maximum amount of data to be received at once is specified by bufsize.
 	#See the Unix manual page recv(2) for the meaning of the optional argument flags; it defaults to zero.
 	output = remote_conn.recv(4096)
+	
+	# For best match with hardware and network realities,
+	#the value of bufsize should be a relatively small power of 2, for example, 4096
 	print (output)
 
 	remote_conn.send(COMMAND + '\n')

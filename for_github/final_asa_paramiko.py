@@ -82,7 +82,7 @@ try:
 	time.sleep(1)
 	remote_conn.send(password + '\n')
 	time.sleep(1)
-	output = remote_conn.recv(65535)
+	output = remote_conn.recv(5000)
 	print (output)
 
 	remote_conn.send(COMMAND + '\n')
